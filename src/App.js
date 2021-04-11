@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ActivityContainer from './containers/ActivitiesContainer';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <div>
-        Dadventures
-      </div>
+      <ActivityContainer />
     );
   }
 }
