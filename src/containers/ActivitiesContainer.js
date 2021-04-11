@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Activity from '../components/activities/Activity';
+import Activities from '../components/activities/Activities';
 
 class ActivityContainer extends Component {
     render () {
         return (
             <div>
-                <Activity />
+                <Activities />
             </div>
         )
     }
