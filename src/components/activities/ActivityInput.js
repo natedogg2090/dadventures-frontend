@@ -15,11 +15,23 @@ class ActivityInput extends Component {
             })
     }
 
+    handleOnSubmit = (e) => {
+        e.preventDefault()
+        this.props.addActivity(this.state)
+        this.setState({
+            activityName: " ",
+            activityDescription: " ",
+            activityDuration: " ",
+            activityWhatToBring: " ",
+            activityWhatToDo: " "
+        })
+    }
+
     render() {
         return(
             <div>
                 <h1>Add New Activity</h1>
-                <form>
+                <form onSubmit={this.handleOnSubmit}>
                     <span>Name: <input type="text" name="activityName" id="text" onChange={this.handleOnChange} /></span>
                     <span>Description: <input type="text" name="activityDescription" id="text" onChange={this.handleOnChange} /></span>
                     <span>Duration: <input type="text" name="activityDuration" id="text" onChange={this.handleOnChange} /></span>
