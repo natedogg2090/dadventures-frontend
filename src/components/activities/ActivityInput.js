@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 
 class ActivityInput extends Component {
     state = {
-        activityName: " ",
-        activityDescription: " ",
-        activityDuration: " ",
-        activityWhatToBring: " ",
-        activityWhatToDo: " "
+        name: " ",
+        description: " ",
+        duration: " ",
+        what_to_bring: " ",
+        what_to_do: " "
     }
+
+    // hiking
+    // go walking in the woods
+    // 30
+    // shoes, water, walking stick
+    // 1. put on your shoes. 2. pack your water. 3. start walking.
 
     handleOnChange = (e) => {
             this.setState({
@@ -19,11 +25,11 @@ class ActivityInput extends Component {
         e.preventDefault()
         this.props.addActivity(this.state)
         this.setState({
-            activityName: " ",
-            activityDescription: " ",
-            activityDuration: " ",
-            activityWhatToBring: " ",
-            activityWhatToDo: " "
+            name: " ",
+            description: " ",
+            duration: " ",
+            what_to_bring: " ",
+            what_to_do: " "
         })
     }
 
@@ -32,18 +38,18 @@ class ActivityInput extends Component {
             <div>
                 <h1>Add New Activity</h1>
                 <form onSubmit={this.handleOnSubmit}>
-                    <span>Name: <input type="text" name="activityName" id="text" onChange={this.handleOnChange}  value={this.state.activityName} /></span>
-                    <span>Description: <input type="text" name="activityDescription" id="text" onChange={this.handleOnChange} value={this.state.activityDescription} /></span>
-                    <span>Duration: <input type="text" name="activityDuration" id="text" onChange={this.handleOnChange} value={this.state.activityDuration} /></span>
-                    <span>What to bring: <input type="text" name="activityWhatToBring" id="text" onChange={this.handleOnChange} value={this.state.activityWhatToBring} /></span>
-                    <span>What to do: <input type="text" name="activityWhatToDo" id="text" onChange={this.handleOnChange} value={this.state.activityWhatToDo} /></span>
+                    <span>Activity Name: <input type="text" name="name" id="text" onChange={this.handleOnChange}  value={this.state.name} /></span>
+                    <span>Description: <input type="text" name="description" id="text" onChange={this.handleOnChange} value={this.state.description} /></span>
+                    <span>Duration: <input type="text" name="duration" id="text" onChange={this.handleOnChange} value={this.state.duration} /></span>
+                    <span>What to bring: <input type="text" name="what_to_bring" id="text" onChange={this.handleOnChange} value={this.state.what_to_bring} /></span>
+                    <span>What to do: <input type="text" name="what_to_do" id="text" onChange={this.handleOnChange} value={this.state.what_to_do} /></span>
                     <input type="submit" value="Submit" />
                 </form>
-                {[this.state.activityName,
-                this.state.activityDescription,
-                this.state.activityDuration,
-                this.state.activityWhatToBring,
-                this.state.activityWhatToDo]}
+                {[this.state.name,
+                this.state.description,
+                this.state.duration,
+                this.state.what_to_bring,
+                this.state.what_to_do]}
             </div>
         )
     }
