@@ -7,7 +7,6 @@ import { fetchActivities } from '../actions/activityActions';
 class ActivityContainer extends Component {
 
     componentDidMount() {
-        console.log(this.props)
         this.props.fetchActivities()
     }
 
@@ -15,17 +14,24 @@ class ActivityContainer extends Component {
         return (
             <div>
                 <ActivityInput addActivity={this.props.addActivity} />
-                <Activities />
+                <Activities activities={this.props.activities} />
             </div>
         )
+    }
+}
+
+const mapStateToProps = state => {
+    return{
+        activities: state.activities,
+        loading: state.loading
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
         fetchActivities: () => dispatch(fetchActivities()),
-        addActivity: (text) => dispatch({ type: "ADD_ACTIVITY", text})
+        addActivity: (data) => dispatch({ type: "ADD_ACTIVITY", data})
     }
 }
 
-export default connect(null, mapDispatchToProps) (ActivityContainer);
+export default connect(mapStateToProps, mapDispatchToProps) (ActivityContainer);
