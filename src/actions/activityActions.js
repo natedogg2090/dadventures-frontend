@@ -6,8 +6,8 @@ export const fetchActivities = () => {
             response => response.json()
         )
         .then(
-            data => console.log(data)
-            // data => dispatch({ type: "ADD_ACTIVITY", data})
+            // data => console.log(data)
+            responseJSON => dispatch({ type: "ADD_ACTIVITY", activities: responseJSON.data })
         )
     }
 }
