@@ -30,7 +30,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         fetchActivities: () => dispatch(fetchActivities()),
-        addActivity: (data) => dispatch({ type: "ADD_ACTIVITY", data})
+        addActivity: (activities) => dispatch({ type: "ADD_ACTIVITY", activities})
     }
 }
 
