@@ -1,7 +1,9 @@
+const baseURL = 'http://localhost:3000/api/v1/activities'
+
 export const fetchActivities = () => {
     return (dispatch) => {
         dispatch({ type: 'LOADING_ACTIVITIES' })
-        fetch('http://localhost:3000/api/v1/activities')
+        fetch(`${baseURL}`)
         .then(
             response => response.json()
         )
