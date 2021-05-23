@@ -23,22 +23,18 @@ export default function manageActivities(state = {
 
 			// I want my state to equal an object with key activities and value is an array of activity objects
 
-			if (!(Array.isArray(action.activities))) {
-				const activity = {
-					id: cuidFn(),
-					attributes: action.activities
-				}
+			if (!(Array.isArray(action.payload))) {
+				debugger;
 				return {
 					...state,
-					activities: [...state.activities, activity],
+					activities: [...state.activities, action.payload],
 					loading: false
 				}
 			}
 			else {
-				const activities = action.activities
 				return { 
 					...state,
-					activities: activities,
+					activities: action.payload,
 					loading: false
 				}
 			}
