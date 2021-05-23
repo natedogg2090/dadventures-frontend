@@ -3,6 +3,7 @@ import ActivityInput from '../components/activities/ActivityInput';
 import Activities from '../components/activities/Activities';
 import { connect } from 'react-redux';
 import { fetchActivities } from '../actions/fetchActivities';
+import { addActivity } from '../actions/addActivity';
 
 class ActivityContainer extends Component {
 
@@ -27,11 +28,11 @@ const mapStateToProps = state => {
     }
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return{
-//         fetchActivities: () => dispatch(fetchActivities()),
-//         // addActivity: (activities) => dispatch({ type: "ADD_ACTIVITY", activities})
-//     }
-// }
+const mapDispatchToProps = dispatch => {
+    return{
+        fetchActivities: () => dispatch(fetchActivities()),
+        addActivity: (data) => dispatch(addActivity(data))
+    }
+}
 
-export default connect(mapStateToProps, { fetchActivities }) (ActivityContainer);
+export default connect(mapStateToProps, mapDispatchToProps) (ActivityContainer);
