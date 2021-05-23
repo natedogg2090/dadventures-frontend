@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addActivity } from '.../actions/addActivity';
 
 class ActivityInput extends Component {
     state = {
@@ -55,4 +57,4 @@ class ActivityInput extends Component {
     }
 }
 
-export default ActivityInput
+export default connect(null, { addActivity })(ActivityInput)
