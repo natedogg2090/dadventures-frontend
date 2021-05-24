@@ -4,11 +4,25 @@ import Activities from '../components/activities/Activities';
 import { connect } from 'react-redux';
 import { fetchActivities } from '../actions/fetchActivities';
 import { addActivity } from '../actions/addActivity';
+import { fetchDadJokes } from '../actions/fetchDadJokes';
 
 class ActivityContainer extends Component {
 
     componentDidMount() {
         this.props.fetchActivities()
+        fetch(`https://icanhazdadjoke.com/`, {
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'Dadventures App (https://github.com/natedogg2090/dadventures-frontend)'
+            }, 
+            method: 'GET'
+        })
+        .then(
+            response => response.json()
+        )
+        .then(
+            data => console.log(data)
+        )
     }
 
     render () {
