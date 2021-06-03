@@ -4,25 +4,26 @@ import Activities from '../components/activities/Activities';
 import { connect } from 'react-redux';
 import { fetchActivities } from '../actions/fetchActivities';
 import { addActivity } from '../actions/addActivity';
-// import { fetchDadJokes } from '../actions/fetchDadJokes';
+import { fetchDadJokes } from '../actions/fetchDadJokes';
 
 class ActivityContainer extends Component {
 
     componentDidMount() {
         this.props.fetchActivities()
-        fetch(`https://icanhazdadjoke.com/`, {
-            headers: {
-                'Accept': 'application/json',
-                'User-Agent': 'Dadventures App (https://github.com/natedogg2090/dadventures-frontend)'
-            }, 
-            method: 'GET'
-        })
-        .then(
-            response => response.json()
-        )
-        .then(
-            data => console.log(data)
-        )
+        // fetch(`https://icanhazdadjoke.com/`, {
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'User-Agent': 'Dadventures App (https://github.com/natedogg2090/dadventures-frontend)'
+        //     }, 
+        //     method: 'GET'
+        // })
+        // .then(
+        //     response => response.json()
+        // )
+        // .then(
+        //     data => console.log(data)
+        // )
+        this.props.fetchDadJokes()
     }
 
     render () {
@@ -45,6 +46,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         fetchActivities: () => dispatch(fetchActivities()),
+        fetchDadJokes: () => dispatch(fetchDadJokes()),
         addActivity: (data) => dispatch(addActivity(data))
     }
 }
