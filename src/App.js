@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import ActivityContainer from './containers/ActivitiesContainer';
+import JokesContainer from './containers/JokesContainer';
 
 class App extends Component {
   render() {
     return (
-      <ActivityContainer />
+      <div>
+        <ActivityContainer />
+        <JokesContainer />
+      </div>
     );
   }
 }
