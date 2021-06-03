@@ -6,10 +6,14 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import manageActivity from './reducers/manageActivity';
+import manageJokes from './reducers/manageJokes';
+import { combineReducers } from 'redux';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(manageActivity, composeEnhancers( applyMiddleware(thunk) ))
+const reducers = combineReducers({ manageActivity, manageJokes })
+
+const store = createStore(reducers, composeEnhancers( applyMiddleware(thunk) ))
 
 ReactDOM.render(
   <Provider store={store}>
