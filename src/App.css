@@ -15,3 +15,13 @@ h1 {
 h2 {
     font-weight: 100;
 }
+
+.activitiesContainer {
+    width: 48%;
+    float: left;
+}
+
+.jokesContainer {
+    width: 48%;
+    float: left;
+}
