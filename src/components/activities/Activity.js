@@ -6,7 +6,7 @@ class Activity extends Component {
         const { activity } = this.props;
 
         return(
-            <div>
+            <div class="activity">
                 <h1>{activity.name}</h1>
                 <p>{activity.duration}</p>
                 <p>{activity.description}</p>

@@ -8,7 +8,6 @@ export const fetchActivities = () => {
             response => response.json()
         )
         .then(
-            // data => console.log(data)
             activities => dispatch({ type: "ADD_ACTIVITY", payload: activities.data })
         )
     }

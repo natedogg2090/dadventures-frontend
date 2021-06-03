@@ -9,12 +9,6 @@ class ActivityInput extends Component {
         what_to_do: ""
     }
 
-    // hiking
-    // go walking in the woods
-    // 30
-    // shoes, water, walking stick
-    // 1. put on your shoes. 2. pack your water. 3. start walking.
-
     handleOnChange = (e) => {
             this.setState({
                 [e.target.name]: e.target.value

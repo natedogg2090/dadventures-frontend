@@ -4,7 +4,7 @@ import Activities from '../components/activities/Activities';
 import { connect } from 'react-redux';
 import { fetchActivities } from '../actions/fetchActivities';
 import { addActivity } from '../actions/addActivity';
-import { fetchDadJokes } from '../actions/fetchDadJokes';
+// import { fetchDadJokes } from '../actions/fetchDadJokes';
 
 class ActivityContainer extends Component {
 
