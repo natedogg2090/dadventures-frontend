@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchDadJokes } from '../actions/fetchDadJokes';
 import Jokes from '../components/jokes/Jokes';
 
-class JokeContainer extends Component {
+class JokesContainer extends Component {
 
     componentDidMount() {
         this.props.fetchDadJokes()
@@ -31,4 +31,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps ) (JokeContainer);
+export default connect(mapStateToProps, mapDispatchToProps ) (JokesContainer);

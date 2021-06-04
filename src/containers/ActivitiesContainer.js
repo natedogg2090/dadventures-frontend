@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchActivities } from '../actions/fetchActivities';
 import { addActivity } from '../actions/addActivity';
 
-class ActivityContainer extends Component {
+class ActivitiesContainer extends Component {
 
     componentDidMount() {
         this.props.fetchActivities()
@@ -35,4 +35,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (ActivityContainer);
+export default connect(mapStateToProps, mapDispatchToProps) (ActivitiesContainer);
