@@ -1,5 +1,5 @@
 export default function manageActivities(state = {
-	activities: [], loading: false
+	activities: [], memories: [], loading: false
 }, action) {
 	switch (action.type) {
 		case 'LOADING_ACTIVITIES':
@@ -27,14 +27,14 @@ export default function manageActivities(state = {
 		// case 'DELETE_RESTAURANT':
 		// 	return { ...state, restaurants: state.restaurants.filter(restaurant => restaurant.id !== action.id) }
 
-		// case 'ADD_REVIEW':
-		// 	const review = { 
-		// 		text: action.review.text, 
-		// 		restaurantId: action.review.restaurantId, 
-		// 		id: cuidFn() 
+		// case 'ADD_MEMORY':
+		// 	const memory = { 
+		// 		text: action.memory.text, 
+		// 		activityId: action.review.activityId, 
+		// 		id: action.memory.id
 		// 	}
 			
-		// 	return { ...state, reviews: [...state.reviews, review] }
+		// 	return { ...state, memories: [...state.memories, memory] }
 
 		// case 'DELETE_REVIEW':
 		// 	return { ...state, reviews: state.reviews.filter(review => review.id !== action.id) }
