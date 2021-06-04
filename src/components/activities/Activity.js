@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MemoriesContainer from '../../containers/MemoriesContainer';
 
 class Activity extends Component {
 
@@ -12,7 +13,7 @@ class Activity extends Component {
                 <p>{activity.description}</p>
                 <p>{activity.what_to_bring}</p>
                 <p>{activity.what_to_do}</p>
-
+                < MemoriesContainer activity={activity}/>
             </div>
         )
     }
