@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ActivityInput from '../components/activities/ActivityInput';
 import Activities from '../components/activities/Activities';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 import { fetchActivities } from '../actions/fetchActivities';
 import { addActivity } from '../actions/addActivity';
 
@@ -14,8 +15,8 @@ class ActivitiesContainer extends Component {
     render () {
         return (
             <div class="activitiesContainer">
-                <ActivityInput addActivity={this.props.addActivity} />
-                <Activities activities={this.props.activities} />
+                <Route path='/activities/new' render={ () => <ActivityInput addActivity={this.props.addActivity} /> } />
+                <Route exact path='/activities' render={ () => <Activities activities={this.props.activities} /> } />
             </div>
         )
     }

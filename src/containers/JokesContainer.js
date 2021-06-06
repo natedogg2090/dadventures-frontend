@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 import { fetchDadJokes } from '../actions/fetchDadJokes';
 import Jokes from '../components/jokes/Jokes';
 
@@ -12,7 +13,7 @@ class JokesContainer extends Component {
     render () {
         return (
             <div class="jokesContainer">
-                <Jokes jokes={this.props.jokes} />
+                <Route path='/activities/new' render={ () => <Jokes jokes={this.props.jokes} /> } />
             </div>
         )
     }
