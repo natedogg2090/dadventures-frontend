@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MemoriesContainer from '../../containers/MemoriesContainer';
 
 class Memory extends Component {
 
