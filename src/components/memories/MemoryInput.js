@@ -13,7 +13,7 @@ class MemoryInput extends Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault()
-        this.props.addMemory(this.state)
+        this.props.addMemory({memory: this.state, activityId: this.props.activityId})
         this.setState({
             description: ""
         })
