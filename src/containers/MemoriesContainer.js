@@ -2,20 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MemoryInput from '../components/memories/MemoryInput';
 // import Memories from '../components/memories/Memories';
-// import { connect } from 'react-redux';
-// import { fetchActivities } from '../actions/fetchActivities';
+// import { fetchMemories } from '../actions/fetchMemories';
 import { addMemory } from '../actions/addMemory';
 
 class MemoriesContainer extends Component {
 
     // componentDidMount() {
-    //     this.props.fetchActivities()
+    //     this.props.fetchMemories()
     // }
 
     render () {
         return (
             <div class="memoriesContainer">
-                <MemoryInput addMemory={this.props.addMemory} activityId={this.props.activity.id} />
+                <MemoryInput addMemory={this.props.addMemory} activityId={this.props.activityId} />
                 {/* <Memories memories={this.props.memories} activityId={this.props.activity.id} /> */}
                 Memories Container Loaded
             </div>
