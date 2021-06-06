@@ -4,7 +4,7 @@ import Activity from './Activity';
 class Activities extends Component {
 
     renderActivities = () => this.props.activities.map(
-        activity => < Activity key={activity.id} activity={activity.attributes} />
+        activity => < Activity key={activity.id} activityId={activity.id} activity={activity.attributes} />
     )
     
     render() {
