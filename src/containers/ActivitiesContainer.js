@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import { fetchActivities } from '../actions/fetchActivities';
 import { addActivity } from '../actions/addActivity';
+import Activity from '../components/activities/Activity';
 
 class ActivitiesContainer extends Component {
 
@@ -16,7 +17,8 @@ class ActivitiesContainer extends Component {
         return (
             <div class="activitiesContainer">
                 <Route path='/activities/new' render={ () => <ActivityInput addActivity={this.props.addActivity} /> } />
-                <Route exact path='/activities' render={ () => <Activities activities={this.props.activities} /> } />
+                <Route path='/activities/:id' render={ (routerProps) => <Activity { ...routerProps } activities={this.props.activities} /> } />
+                <Route exact path='/activities' render={ (routerProps) => <Activities { ...routerProps } activities={this.props.activities} /> } />
             </div>
         )
     }
