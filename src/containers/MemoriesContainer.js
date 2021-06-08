@@ -14,7 +14,7 @@ class MemoriesContainer extends Component {
     render () {
         return (
             <div class="memoriesContainer">
-                <MemoryInput addMemory={this.props.addMemory} activityId={this.props.activityId} />
+                <MemoryInput addMemory={this.props.addMemory} activity={this.props.activity} />
                 {/* <Memories memories={this.props.memories} activityId={this.props.activity.id} /> */}
                 Memories Container Loaded
             </div>
