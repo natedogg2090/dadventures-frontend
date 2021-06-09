@@ -14,9 +14,6 @@ export default function manageMemories(state = {memories: [], loading: false}, a
 				loading: false
 			}
 
-		// case 'DELETE_REVIEW':
-		// 	return { ...state, reviews: state.reviews.filter(review => review.id !== action.id) }
-
 		default:
 			return state;
 	}
