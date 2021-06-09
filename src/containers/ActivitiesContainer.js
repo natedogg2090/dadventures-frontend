@@ -25,14 +25,14 @@ class ActivitiesContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    return{
+    return {
         activities: state.manageActivity.activities,
         loading: state.loading
     }
 }
 
 const mapDispatchToProps = dispatch => {
-    return{
+    return {
         fetchActivities: () => dispatch(fetchActivities()),
         addActivity: (data) => dispatch(addActivity(data))
     }
