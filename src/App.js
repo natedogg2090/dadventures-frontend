@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ActivityContainer from './containers/ActivitiesContainer';
 import JokesContainer from './containers/JokesContainer';
-import MemoriesContainer from './containers/MemoriesContainer';
+// import MemoriesContainer from './containers/MemoriesContainer';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
       <div>
         <ActivityContainer />
         <JokesContainer />
-        <MemoriesContainer />
+        {/* <MemoriesContainer /> */}
       </div>
     );
   }
