@@ -39,11 +39,6 @@ class ActivityInput extends Component {
                     <span>What to do: <input type="text" name="what_to_do" id="text" onChange={this.handleOnChange} value={this.state.what_to_do} /></span>
                     <input type="submit" value="Submit" />
                 </form>
-                {[this.state.name,
-                this.state.description,
-                this.state.duration,
-                this.state.what_you_need,
-                this.state.what_to_do]}
             </div>
         )
     }
