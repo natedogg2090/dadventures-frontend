@@ -28,14 +28,11 @@ export default function manageActivities(state = {
 		// 	return { ...state, restaurants: state.restaurants.filter(restaurant => restaurant.id !== action.id) }
 
 		case 'ADD_MEMORY':
-			debugger;
-			const memory = { 
-				text: action.memory.text, 
-				activityId: action.review.activityId, 
-				id: action.memory.id
-			}
-			
-		// 	return { ...state, memories: [...state.memories, memory] }
+				return {
+					...state,
+					memories: [...state.memories, action.payload],
+					loading: false
+				}
 
 		// case 'DELETE_REVIEW':
 		// 	return { ...state, reviews: state.reviews.filter(review => review.id !== action.id) }
