@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-// import Memory from './Memory';
+import Memory from './Memory';
 
 class Memories extends Component {
 
-    // renderActivities = () => this.props.activities.map(
-    //     activity => < Activity key={activity.id} activity={activity.attributes} />
-    // )
+    renderMemories = () => this.props.memories.map(
+        memory => < Memory key={memory.id} memory={memory.attributes} />
+    )
     
     render() {
         return (
             <ul>
-                {/* {this.renderActivities()} */}
-                Memories component loaded
+                {this.renderMemories()}
             </ul>
         )
     }

@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Memory extends Component {
+const Memory = (props) => {
+    // let activity = props.activities[props.match.params.id - 1]
+    // let memory = props.memories
 
-    render() {
-        // const { activity } = this.props;
-
-        return(
-            <div class="memory">
-                Memory Component loaded
-            </div>
-        )
-    }
+    return (
+        // <p>{memory ? memory.attributes.description : null}</p>
+        <div>{props.memory.description}</div>
+    )
 }
 
 export default Memory;

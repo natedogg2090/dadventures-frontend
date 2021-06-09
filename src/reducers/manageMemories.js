@@ -1,4 +1,6 @@
-export default function manageMemories(state = {memories: [], loading: false}, action) {
+export default function manageMemories(state = {
+	memories: [], loading: false
+}, action) {
 	switch (action.type) {
 		case 'LOADING_MEMORIES':
 		return {
@@ -7,10 +9,9 @@ export default function manageMemories(state = {memories: [], loading: false}, a
 			loading: true
 		}
 		case 'ADD_MEMORIES':
-			const memories = action.payload
 			return { 
 				...state,
-				memories: [...state.memories, memories],
+				memories: action.payload,
 				loading: false
 			}
 
