@@ -12,7 +12,7 @@ export default function manageJokes(state = {
 			const joke = action.payload
             return { 
                 ...state,
-                jokes: [...state.jokes , joke],
+                jokes: [...state.jokes, joke],
                 loading: false
             }
 		default:
