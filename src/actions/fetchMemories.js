@@ -8,7 +8,7 @@ export const fetchMemories = () => {
             response => response.json()
         )
         .then(
-            data => dispatch({ type: "ADD_MEMORIES", payload: data })
+            memories => dispatch({ type: "ADD_MEMORIES", payload: memories.data })
         )
     }
 }
