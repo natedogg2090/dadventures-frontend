@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MemoryInput from '../components/memories/MemoryInput';
 // import Memories from '../components/memories/Memories';
-// import { fetchMemories } from '../actions/fetchMemories';
+import { fetchMemories } from '../actions/fetchMemories';
 import { addMemory } from '../actions/addMemory';
 
 class MemoriesContainer extends Component {
 
-    // componentDidMount() {
-    //     this.props.fetchMemories()
-    // }
+    componentDidMount() {
+        this.props.fetchMemories()
+    }
 
     render () {
         return (
@@ -23,14 +23,15 @@ class MemoriesContainer extends Component {
 }
 
 // const mapStateToProps = state => {
-//     return{
+//     return {
 //         activities: state.manageActivity.activities,
 //         loading: state.loading
 //     }
 // }
 
 const mapDispatchToProps = dispatch => {
-    return{
+    return {
+        fetchMemories: () => dispatch(fetchMemories()),
         addMemory: (data) => dispatch(addMemory(data))
     }
 }

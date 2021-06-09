@@ -20,15 +20,15 @@ class JokesContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    return{
+    return {
         jokes: state.manageJokes.jokes,
         loading: state.loading
     }
 }
 
 const mapDispatchToProps = dispatch => {
-    return{
-        fetchDadJokes: () => dispatch(fetchDadJokes()),
+    return {
+        fetchDadJokes: () => dispatch(fetchDadJokes())
     }
 }
 
