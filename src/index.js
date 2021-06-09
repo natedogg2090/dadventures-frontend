@@ -7,12 +7,13 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import manageActivity from './reducers/manageActivity';
 import manageJokes from './reducers/manageJokes';
+import manageMemories from './reducers/manageMemories';
 import { combineReducers } from 'redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const reducers = combineReducers({ manageActivity, manageJokes })
+const reducers = combineReducers({ manageActivity, manageJokes, manageMemories })
 
 const store = createStore(reducers, composeEnhancers( applyMiddleware(thunk) ))
 
