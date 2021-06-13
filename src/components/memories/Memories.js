@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Memory from './Memory';
 
-class Memories extends Component {
+const Memories = (props) => {
 
-    renderMemories = () => this.props.memories.map(
-        memory => < Memory key={memory.id} memory={memory.attributes} />
+    return (
+        <ul>{props.memories.map( memory => memory.relationships.activity.data.id === props.match.params.id ? <Memory key={memory.id} memory={memory.attributes} /> : null )}</ul>
     )
-    
-    render() {
-        return (
-            <ul>
-                {this.renderMemories()}
-            </ul>
-        )
-    }
 }
 
 export default Memories;
