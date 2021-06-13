@@ -15,6 +15,13 @@ export default function manageMemories(state = {
 				loading: false
 			}
 
+		case 'ADD_MEMORY':
+			return {
+				...state,
+				memories: [...state.memories, action.payload],
+				loading: false
+			}
+
 		default:
 			return state;
 	}
