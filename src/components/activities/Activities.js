@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-// import Activity from './Activity';
 
 class Activities extends Component {
 
