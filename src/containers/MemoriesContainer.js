@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import MemoryInput from '../components/memories/MemoryInput';
 import Memories from '../components/memories/Memories';
-// import Memory from '../components/memories/Memory';
 import { fetchMemories } from '../actions/fetchMemories';
 import { addMemory } from '../actions/addMemory';
 
