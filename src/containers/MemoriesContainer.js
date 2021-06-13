@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import MemoryInput from '../components/memories/MemoryInput';
 import Memories from '../components/memories/Memories';
-import Memory from '../components/memories/Memory';
+// import Memory from '../components/memories/Memory';
 import { fetchMemories } from '../actions/fetchMemories';
 import { addMemory } from '../actions/addMemory';
 
@@ -17,8 +17,7 @@ class MemoriesContainer extends Component {
         return (
             <div class="memoriesContainer">
                 <MemoryInput addMemory={this.props.addMemory} activity={this.props.activity} />
-                <Memories memories={this.props.memories} activity={this.props.activity} />
-                <Route path='/activities/:id/memories/:id' render={ (routerProps) => <Memory { ...routerProps } memories={this.props.memories} /> } />
+                <Route path='/activities/:id/' render={ (routerProps) => <Memories {...routerProps } memories={this.props.memories} activity={this.props.activity} /> } />
             </div>
         )
     }
