@@ -1,19 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Joke from './Joke';
 
-class Jokes extends Component {
+const Jokes = (props) => {
 
-    renderJokes = () => this.props.jokes.map(
-        joke => < Joke key={joke.id} joke={joke.joke} />
+    return (
+        <p>
+            {props.jokes.map(joke => < Joke key={joke.id} joke={joke.joke} /> )}
+        </p>
     )
-    
-    render() {
-        return (
-            <ul>
-                {this.renderJokes()}
-            </ul>
-        )
-    }
 }
 
 export default Jokes;
