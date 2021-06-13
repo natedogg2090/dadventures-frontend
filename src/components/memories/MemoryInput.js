@@ -30,7 +30,6 @@ class MemoryInput extends Component {
                     <span>Description: <input type="text" name="description" id={this.props.activity ? this.props.activity.id : null} onChange={this.handleOnChange} value={this.state.description} /></span>
                     <input type="submit" value="Submit" />
                 </form>
-                {this.state.description}
             </div>
         )
     }
