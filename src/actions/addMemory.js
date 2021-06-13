@@ -11,6 +11,6 @@ export const addMemory = (data) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(memory => dispatch({ type: 'ADD_MEMORY', payload: data }))
+        .then(memory => dispatch({ type: 'ADD_MEMORY', payload: memory.data }))
     }
 }
