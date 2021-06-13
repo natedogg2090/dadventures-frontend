@@ -9,9 +9,10 @@ class Activities extends Component {
     
     render() {
         return (
-            <ul>
+            <div>
+                <h1>DADVENTURES</h1>
                 {this.renderActivities()}
-            </ul>
+            </div>
         )
     }
 }
