@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ActivityContainer from './containers/ActivitiesContainer';
 import JokesContainer from './containers/JokesContainer';
+import Counter from './components/Counter';
 import {Link} from 'react-router-dom';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         </nav>
         <ActivityContainer />
         <JokesContainer />
+        <Counter />
       </div>
     );
   }
