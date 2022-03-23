@@ -14,7 +14,6 @@ class App extends Component {
         </nav>
         <ActivityContainer />
         <JokesContainer />
-        <Counter />
       </div>
     );
   }
